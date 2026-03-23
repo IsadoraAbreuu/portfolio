@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/main.dart';
+import 'package:portfolio/screens/tela_inicial.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -41,12 +42,7 @@ class SplashScreen extends StatelessWidget {
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-                    colors: [
-                      Colors.transparent, 
-                      Colors.black.withOpacity(0.5), 
-                      Colors.black.withOpacity(0.99),
-                      
-                    ],
+                    colors: [Colors.transparent,Colors.black.withOpacity(0.5),Colors.black.withOpacity(0.99)],
                   ),
                 ),
               ),
@@ -64,7 +60,19 @@ class SplashScreen extends StatelessWidget {
             ),
 
             SizedBox(height: 16),
-            TextButton(onPressed: onPressed, child: child)
+            TextButton(style: TextButton.styleFrom(
+              backgroundColor: primaria.withOpacity(0.5),
+              padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
+            ),
+            onPressed: () {
+            Navigator.push(
+              context, 
+              MaterialPageRoute(builder: (context) => TelaInicial()));
+           }, 
+           child: Text("Entrar", style: TextStyle(color: texto, fontWeight: FontWeight.w500, fontSize: 14, fontFamily: 'Poppins')))
           ],
         ),
       ),
