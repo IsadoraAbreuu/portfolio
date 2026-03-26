@@ -15,20 +15,20 @@ class SplashScreen extends StatelessWidget {
 
           children: [
             Container(width: 96, height: 96,
-              decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.black, border: Border.all(color: primaria, width: 2),
+              decoration: BoxDecoration(shape: BoxShape.circle, color: background, border: Border.all(color: primaria, width: 2),
                 boxShadow: [
                   BoxShadow(color: secundaria,blurRadius: 36, spreadRadius: 4)
                 ],
               ),
               child: Center(
-                child: Text("</>", style: TextStyle(fontSize: 26, fontWeight: FontWeight.w900, color: Colors.white, fontFamily: "Poppins")),
+                child: Text("</>", style: TextStyle(fontSize: 26, fontWeight: FontWeight.w900, color: texto, fontFamily: "Poppins")),
               ),
             ),
 
             SizedBox(height: 44),
             Container(
               width: 330,
-              height: 330,
+              height: 329,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(1),
                 image: DecorationImage(
@@ -72,7 +72,7 @@ class SplashScreen extends StatelessWidget {
               context, 
               MaterialPageRoute(builder: (context) => TelaInicial()));
            }, 
-           child: Text("Entrar", style: TextStyle(color: texto, fontWeight: FontWeight.w500, fontSize: 14, fontFamily: 'Poppins')))
+           child: Text("Conhecer", style: TextStyle(color: texto, fontWeight: FontWeight.w500, fontSize: 14, fontFamily: 'Poppins')))
           ],
         ),
       ),
